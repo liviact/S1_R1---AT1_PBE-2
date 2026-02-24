@@ -1,4 +1,4 @@
-import imagemController from "../controllers/imagem.controller.js";
+import produtoController from "../controllers/produto.controller.js";
 import uploadImage from "../middlewares/uploadImage.middleware.js";
 import uploadFile from "../middlewares/uploadDocuments.middleware.js";
 import { Router } from "express";

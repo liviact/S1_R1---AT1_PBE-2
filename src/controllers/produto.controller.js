@@ -1,5 +1,5 @@
 
-const imagemController = {
+const produtoController = {
     upload: async (req, res) => {
         try {
             if(!req.file){
@@ -18,4 +18,4 @@ const imagemController = {
 }
 
 
-export default imagemController;
+export default produtoController;
