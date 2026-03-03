@@ -2,8 +2,8 @@ import pool from "../config/db.js";
 
 const produtoModel = {
     insert: async (pProduto) => {
-        const sql = 'INSERT INTO produtos (nome_produto , valor_produto , vinculo_imagem) VALUES (?,?,?);';
-        const values = [pProduto.nome, pProduto.valor, pProduto.imagem];
+        const sql = 'INSERT INTO produtos (id_categoria, nome_produto , valor_produto , vinculo_imagem) VALUES (?,?,?,?);';
+        const values = [pProduto.idCategoria,pProduto.nomeProduto, pProduto.valorProduto, pProduto.vinculoImagem];
         const [rows] = await pool.execute(sql, values);
         return rows;
 
@@ -24,11 +24,7 @@ const produtoModel = {
         const values = [pProduto.Id];
         const [rows] = await pool.execute(sql, values);
         return rows;
-    }
-
-
-    //add delete e update
-    //atualizar as consts
+    }   
 
 }
 
